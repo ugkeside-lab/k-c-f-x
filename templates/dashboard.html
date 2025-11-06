@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>KCFX Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>KCFX Gold Signals</h1>
+<table>
+<tr><th>Time</th><th>Action</th><th>Entry</th><th>SL</th><th>TP</th><th>Confidence</th></tr>
+{% for s in signals %}
+<tr>
+<td>{{s.timestamp}}</td>
+<td>{{s.action}}</td>
+<td>{{s.entry}}</td>
+<td>{{s.stop_loss}}</td>
+<td>{{s.take_profit}}</td>
+<td>{{s.confidence}}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
